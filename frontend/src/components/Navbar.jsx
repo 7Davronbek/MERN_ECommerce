@@ -9,7 +9,10 @@ const Navbar = () => {
                     <div className="col-lg-2">
                         <Link to='/'><h1>Amazon</h1></Link>
                     </div>
-                    <div className="col-lg-8 ms-auto">
+                    <div className="col-lg-6 ms-auto myCol">
+                        <Link to='/products'>Products</Link>
+                        <Link to='/products'>Products</Link>
+                        <Link to='/products'>Products</Link>
                         <Link to='/products'>Products</Link>
                     </div>
                 </div>
