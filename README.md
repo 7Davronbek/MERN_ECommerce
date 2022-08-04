@@ -1,1 +1,1 @@
-# MERN_ECommerce
+# MERN E-Commerce Project
