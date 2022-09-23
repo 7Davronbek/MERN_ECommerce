@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 // import data from '../data'
 import axios from 'axios'
 import logger from 'use-reducer-logger'
+import Rating from './Rating'
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -25,7 +26,7 @@ const reducer = (state, action) => {
 const Products = () => {
     // const [products, setProducts] = useState([])
 
-    const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {
+    const [{ loading, error, products }, dispatch] = useReducer((reducer), {
         loading: true,
         error: '',
         products: []
@@ -67,8 +68,10 @@ const Products = () => {
                                                     <h3>{product.name}</h3>
                                                     <p><strong>{product.price}</strong></p>
                                                 </Link>
+                                                <Rating rating={product.rating} numReviews={product.numReviews} />
                                                 <div className="btn btn-outline-dark d-block">Add To Cart</div>
                                             </div>
+
                                         </div>
                                     ))
                                 )
