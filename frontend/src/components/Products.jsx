@@ -57,7 +57,7 @@ const Products = () => {
                             error ? <div>{error}</div>
                                 :
                                 (
-                                    products?.map((product, index) => (
+                                    products && products.map((product, index) => (
                                         <div key={product.slug} className="col-lg-3 mb-4">
                                             <div className="cards">
                                                 <Link to={`/product/${product.slug}`}>
@@ -72,7 +72,7 @@ const Products = () => {
                                         </div>
                                     ))
                                 )
-                    } 
+                    }
                 </div>
             </div>
         </div>
