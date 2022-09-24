@@ -66,9 +66,9 @@ const Products = () => {
                                                         <img className='w-100' src={product.image} alt={product.name} />
                                                     </div>
                                                     <h3>{product.name}</h3>
-                                                    <p><strong>{product.price}</strong></p>
+                                                    <Rating rating={product.rating} numReviews={product.numReviews} />
+                                                    <p className='mt-1'><strong>${product.price}</strong></p>
                                                 </Link>
-                                                <Rating rating={product.rating} numReviews={product.numReviews} />
                                                 <div className="btn btn-outline-dark d-block">Add To Cart</div>
                                             </div>
 
